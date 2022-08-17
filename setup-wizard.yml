@@ -1,0 +1,16 @@
+version: "2"
+fields:
+  - id: REPO
+    target:
+      type: environment
+      name: REPO
+    title: Repository to clone
+    description: >-
+      Select a repository to clone that is compatible with nextjs and has build:static and serve:static, a good example could be https://github.com/aave/interface
+  - id: COMMIT
+    target:
+      type: environment
+      name: COMMIT
+    title: COMMIT to checkout
+    description: >-
+      you can select the commit you want to clone, an example in relation to the previous one would be: 6448b63e05301376ad7b947c60257d3dac866ab0

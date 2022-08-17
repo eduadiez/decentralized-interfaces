@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  decentralized-interfaces.public.dappnode.eth:
+    build: .
+    environment:
+      - "REPO=https://github.com/aave/interface"
+      - COMMIT=6448b63e05301376ad7b947c60257d3dac866ab0
+    image: "decentralized-interfaces.public.dappnode.eth:0.1.0"
+    restart: unless-stopped
+    volumes:
+      - "data:/usr/src/app"
+    security_opt:
+      - "seccomp:unconfined"
+volumes:
+  data: {}

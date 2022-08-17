@@ -1,0 +1,17 @@
+{
+  "name": "decentralized-interfaces.public.dappnode.eth",
+  "version": "0.1.0",
+  "description": "This package allows you to clone a github repository and automatically builds and exposes its interface in case it is compatible",
+  "type": "service",
+  "author": "Aaron Swartz",
+  "architectures": [
+    "linux/amd64"
+  ],
+  "categories": [
+    "Developer tools"
+  ],
+  "links": {
+    "homepage": "decentralized-interfaces.public.dappnode:3000"
+  },
+  "license": "GPL-3.0"
+}
