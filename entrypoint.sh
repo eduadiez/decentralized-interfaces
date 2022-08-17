@@ -16,7 +16,7 @@ if [[ ! -f "$IPFS_BIN" ]]; then
     rm -rf kubo
 fi
 
-[ ! -d "./repo" ] && git clone ${REPO} repo
+[ ! -d "./repo" ] && git clone --bare ${REPO} repo
 
 cd repo
 git checkout ${COMMIT_HASH}
@@ -27,9 +27,9 @@ git checkout ${COMMIT_HASH}
 
 ## Upload to IPFS
 git update-server-info
-mv .git/objects/pack/*.pack .
+mv objects/pack/*.pack .
 git unpack-objects < *.pack
-rm -f *.pack .git/objects/pack/*
+rm -f *.pack objects/pack/*
 ipfs --api=/dns/ipfs.dappnode/tcp/5001 add -r . --quiet | tee ../listHashes
 
 REPO_IPFS_HASH=$(tail -1 ../listHashes)
