@@ -1,5 +1,7 @@
 ## Installion
 
+http://my.dappnode/#/installer/%2Fipfs%2FQmdpCBamqD4C55EStxG3PULsTpPsK7ivurUL3NHrvLPQek
+
 To be able to install the package you need to "Bypass only signed safe restriction" on the advanced options since this is an IPFS package33
 
 ## Usage
